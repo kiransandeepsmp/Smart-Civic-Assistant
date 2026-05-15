@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Civic management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+   
+      background-color:    #7AE2CF;
+      color: #333;
+    }
+
+    header {
+      background-color: #06202B;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: rgba(245, 238, 221, 1);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 1.2rem;
+      margin: 0;
+      font-size: 1.4rem;
+      color: #0d47a1;
+    }
+
+    .section {
+      display: none;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      color: #0d47a1;
+      margin-bottom: 1rem;
+    }
+
+    .close-btn {
+      float: right;
+      background: #7AE2CF;;
+      color: black;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .nav ul{
+        list-style-type: none;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+   .nav a{
+        text-decoration: none;
+        color: white;
+        padding-left: 4px;
+        padding-right:4px;
+
+    }
+    .nav a:hover{
+        background-color: #7AE2CF;
+        color:black;
+        border-radius: 25px;
+        transition: 1000ms;
+
+    }
+    
+    .about-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .about-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .profiles {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .profile-card {
+      background-color: rgba(6, 32, 43, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      min-width:200px;
+      max-width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+      color:aqua;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .profile-card h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .profile-card p {
+      margin-top: 5px;
+      color:white;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Civic Engagement</h1>
+
+    <div class="nav">
+        <ul>
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="chatbotorg.html">Chat-Bot</a></li>
+            <li><a href="rights.html">know your rights</a></li>
+            <li><a href="info.html">Civic Portal</a></li>
+        </ul>
+    </div>
+  </header>
+
+ <!-- Sections -->
+ <div id="agriculture" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Agriculture Schemes</h2>
+    <ol>
+      <li><a href="https://pmkisan.gov.in/">PM-KISAN</a></li>
+      <li><a href="https://agricoop.gov.in/">Kisan Credit Card</a></li>
+      <li><a href="https://pmfby.gov.in/">PM Fasal Bima Yojana(PMFBY)</a></li>
+      <li><a href="https://enam.gov.in/web/">e-NAM</a></li>
+    </ol>
+  </div>
+
+  <div id="education" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Education Schemes</h2>
+    <ol>
+      <li><a href="https://scholarships.gov.in/">National Scholarships</a></li>
+      <li><a href="https://education.gov.in/en/samagra-shiksha">Samagra Shiksha</a></li>
+      <li><a href="https://pmposhan.education.gov.in/">PM POSHAN (Mid Day Meal)</a></li>
+    </ol>
+  </div>
+
+  <div id="housing" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Housing Schemes</h2>
+    <ol>
+      <li><a href="https://pmayg.nic.in/">PMAY(Rural)</a></li>
+      <li><a href="https://pmaymis.gov.in/">PMAY(Urban)</a></li>
+      <li><a href="https://mohua.gov.in/">Ministry of Housing and Urban Affairs</a></li>
+
+    </ol>
+  </div>
+
+  <div id="health" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Health Schemes</h2>
+    <ol>
+      <li><a href="https://pmjay.gov.in/">Ayushman Bharat</a></li>
+      <li><a href="https://nhm.gov.in/">National Health Mission (NHM)</a></li>
+      <li><a href="https://esanjeevani.in/">eSanjeevani – Telemedicine</a></li>
+    </ol>
+  </div>
+
+  <div id="employment" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Employment Schemes</h2>
+    <ol>
+      <li><a href="https://nrega.nic.in/">MGNREGA</a></li>
+      <li><a href="https://www.pmkvyofficial.org/">PM Kaushal Vikas Yojana (PMKVY)</a></li>
+      <li><a href="https://www.ncs.gov.in/">National Career Service (NCS)</a></li>
+    </ol>
+  </div>
+
+  <div id="women" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Women & Child Welfare</h2>
+    <ol>
+      <li><a href="https://wcd.nic.in/">Women Empowerment Programs</a></li>
+      <li><a href="https://wcd.nic.in/schemes/one-stop-centre-scheme-osc">One Stop Centre (Sakhi) </a></li>
+      <li><a href="https://wcd.nic.in/BBBPScheme/main.htm">Beti Bachao Beti Padhao (BBBP)</a></li>
+      <li><a href="https://wcd.nic.in/schemes/mahila-shakti-kendras">Mahila Shakti Kendra</a></li>
+
+    </ol>
+  </div>
+  <div id="welfare" class="section">
+    <button class="close-btn" onclick="hideAll()">Close</button>
+    <h2>Women & Child Welfare</h2>
+    <ol>
+      <li><a href="https://www.digitalindia.gov.in/">Digital India</a></li>
+      <li><a href="https://rti.gov.in/">Right to Information (RTI)</a></li>
+      <li><a href="https://wcd.nic.in/BBBPScheme/main.htm">Beti Bachao Beti Padhao (BBBP)</a></li>
+      <li><a href="https://pgportal.gov.in/">Public Grievance Portal (CPGRAMS)</a></li>
+
+    </ol>
+  </div>
+
+
+
+  <div class="container" id="con">
+    <div class="card" onclick="showSection('agriculture')">
+      <img src="https://www.bentoli.com/wp-content/uploads/2017/07/CommercialFarming-1.jpg" alt="Agriculture" />
+      <h3>Agriculture</h3>
+    </div>
+    <div class="card" onclick="showSection('education')">
+      <img src="https://www.jurisiti.com/wp-content/uploads/2025/03/ed.png" alt="Education" />
+      <h3>Education</h3>
+    </div>
+    <div class="card" onclick="showSection('housing')">
+      <img src="https://habitatniagara.ca/wp-content/uploads/2024/11/housing-crisis.jpg" alt="Housing" />
+      <h3>Housing</h3>
+    </div>
+    <div class="card" onclick="showSection('health')">
+      <img src="https://eton.edu.ph/wp-content/uploads/2021/07/Healttt-4-1024x512.jpg" alt="Health" />
+      <h3>Health</h3>
+    </div>
+    <div class="card" onclick="showSection('employment')">
+      <img src="https://labourlawadvisor.in/blog/wp-content/uploads/2022/08/Employment-Bonds-and-their-Validity-2.png" alt="Employment" />
+      <h3>Employment</h3>
+    </div>
+    <div class="card" onclick="showSection('women')">
+      <img src="https://edukemy.com/blog/wp-content/uploads/2024/05/Ministry-of-Women-and-Child-Development.jpg" alt="Women Welfare" />
+      <h3>Women & Child Welfare</h3>
+    </div>
+  </div>
+
+ 
+
+  <section class="about-section" id="aboutus">
+    <h1>Meet Our Team</h1>
+    <p>Passionate individuals working together to empower civic engagement.</p>
+
+    <div class="profiles">
+
+      <div class="profile-card">
+        <h3>Kiran Sandeep</h3><br>
+        <p>FrontEnd/UI & Backend/Api</p>
+        <p>Data collection</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <script>
+    function hideAll() {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+      const container = document.getElementById('con');
+      container.style.display = 'grid'; // show the category cards
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showSection(id) {
+      hideAll();
+      const section = document.getElementById(id);
+      section.style.display = 'block';
+      section.scrollIntoView({ behavior: 'smooth' });
+     
+     
+    const container = document.getElementById('con');
+    container.style.display = 'none'; // hide category cards
+
+    }
+  </script>
+</body>
+</html>

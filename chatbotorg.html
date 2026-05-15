@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Civic Engagement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="../Js/home.js" defer></script> -->
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="chatbot.js" defer></script>
+  <script src="sidebar.js" defer></script>
+</head>
+<body class=" font-sans">
+
+   
+      <!-- Header -->
+      <header class="bg-gray-950 text-white px-6 py-4 flex justify-between items-center  sticky top-0 z-30">
+        <div class="flex items-center gap-3">
+               <h1 class="text-2xl font-bold font-serif text-white">Civic Engagement</h1>
+        </div>
+        <div class="nav">
+          <ul class="flex gap-6">
+              <li class="hover:bg-teal-300 transition duration-500 hover:text-black px-2 rounded text-white"><a href="home.html">Home</a></li>
+
+          </ul>
+      </div>
+      
+      </header>
+
+      <!-- Updated Chatbot Section with Gemini Chatbot -->
+      <div class="chatbot-container">
+        <h2 class="chatbot-header text-black">Civic Bot!</h2>
+        <div class="chat-messages" id="chat-messages">
+        <div class="rounded flex gap-2 bg-teal-300 w-1/2 text-black px-2 py-4"> <h1> How can i assist you.... </h1></div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button class="chatbot-btn bg-gradient-to-br from-sky-500 to-teal-300"
+             id="send-button">Send</button>
+        </div>
+    </div>
+</div>
+
+ 
+
+
+</body>
+</html>
